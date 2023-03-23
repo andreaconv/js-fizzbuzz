@@ -1,17 +1,23 @@
-const list = document.querySelector(".list");
+const list = document.querySelector("ul");
 
 for (let i = 1; i <= 100; i++){
 
   const li = document.createElement("li");
-  li.append(`${i}`)
+  
+  let output = i;
 
-  if (!(i % 3)){
-    li.append(`FIZZ`)
+  if (!(i % 15)){
+    output = "FIZZBUZZ"
+    li.classList.add("blue")
+  }else if (!(i % 3)){
+    output = "FIZZ"
+    li.classList.add("red")
   }else if (!(i % 5)){
-    li.append(`BUZZ`)
-  }else if (!(i % 15)){
-    li.append(`FIZZBUZZ`)
+    output = "BUZZ"
+    li.classList.add("green")
   }
+  
+  li.append(output);
 
   list.append(li);
 
