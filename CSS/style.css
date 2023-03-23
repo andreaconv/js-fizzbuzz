@@ -6,20 +6,39 @@
 
 body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(red, blue);
 }
 
-ul{
-  margin-left: 2rem;
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.red{
-  color: red;
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  aspect-ratio: 1 / 1;
+  margin: 10px;
+  border: 1px solid black;
+  color: white;
+  background: radial-gradient(rgb(25, 44, 80), rgb(65, 12, 56));
 }
 
-.blue{
-  color: blue;
+.fizz{
+  color: rgb(43, 255, 24);
 }
 
-.green{
-  color: green;
+.buzz{
+  color: rgb(247, 173, 36);
+}
+
+.fizzbuzz{
+  color: rgb(36, 240, 255);
 }

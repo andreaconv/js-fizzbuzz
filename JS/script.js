@@ -1,24 +1,25 @@
-const list = document.querySelector("ul");
+const container = document.querySelector('.container');
 
-for (let i = 1; i <= 100; i++){
+for(let i = 1; i <= 100; i++){
 
-  const li = document.createElement("li");
-  
+  const box = document.createElement('div');
+  box.className = 'box';
+
   let output = i;
 
-  if (!(i % 15)){
-    output = "FIZZBUZZ"
-    li.classList.add("blue")
-  }else if (!(i % 3)){
-    output = "FIZZ"
-    li.classList.add("red")
-  }else if (!(i % 5)){
-    output = "BUZZ"
-    li.classList.add("green")
+  if(!(i % 15)){
+    output = 'FizzBuzz';
+    box.classList.add('fizzbuzz');
+  }else if(!(i % 3)){
+    output = 'Fizz'
+    box.classList.add('fizz');
+  }else if(!(i % 5)){
+    output = 'Buzz'
+    box.classList.add('buzz');
   }
-  
-  li.append(output);
 
-  list.append(li);
+  box.append(output);
+
+  container.append(box);
 
 }
